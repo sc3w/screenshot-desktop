@@ -8,9 +8,9 @@
     "temp": "^0.9.4"
   },
   "devDependencies": {
-    "ava": "^3.15.0",
-    "semantic-release": "^18.0.0",
-    "standard": "^16.0.4"
+    "ava": "^5.0.1",
+    "semantic-release": "^19.0.5",
+    "standard": "^17.0.0"
   },
   "ava": {
     "timeout": "1m"

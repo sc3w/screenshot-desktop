@@ -12,12 +12,15 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x, 14.x, 16.x, 17.x]
 
     runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v2
+      - name: Install xrandr
+        run: sudo apt-get update && sudo apt-get install -y x11-xserver-utils
+        if: runner.os == 'Linux'
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
